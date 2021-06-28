@@ -5,32 +5,32 @@ const buttons = document.querySelector(".buttons");
 // const sub = document.querySelector(".subtract");
 
 buttons.addEventListener("click", (e) => {
-    let className = e.target.className;
-    switch(className){
-        case "add":
-            count.innerHTML++;
-            break;
-        case "subtract":
-            count.innerHTML--
-            break;
-        case "reset":
-            count.innerHTML = 0;
-            break;
-        default:
-            console.log("Clicked");
-    }
-    setColor();
-} )
+  let className = e.target.className;
+  switch (className) {
+    case "add":
+      count.innerHTML++;
+      break;
+    case "subtract":
+      count.innerHTML--;
+      break;
+    case "reset":
+      count.innerHTML = 0;
+      break;
+    default:
+      console.log("Clicked");
+  }
+  setColor();
+});
 
 const setColor = () => {
-    if (count.innerHTML > 0 ) {
-        count.style.color = "yellow"
-    } else if (count.innerHTML < 0){
-        count.style.color = "orangered"
-    } else {
-        count.style.color = "#fff"
-    }
-}
+  if (count.innerHTML > 0) {
+    count.style.color = "yellow";
+  } else if (count.innerHTML < 0) {
+    count.style.color = "orangered";
+  } else {
+    count.style.color = "#fff";
+  }
+};
 
 // add.addEventListener("click", (e) => {
 //     count.innerHTML++;
